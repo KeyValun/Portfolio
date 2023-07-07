@@ -55,8 +55,12 @@ body {
 
 .menu a:hover{
   background-color: #2e9a00;
-  color: #191c32;
-  transition: ease-in .4s;
+  color: #ffffff;
+  transition: ease-in .2s;
+}
+
+.toggle-menu, .info-content__subtitle, .info-content .sotial-network{
+  display: none;
 }
 
 /*Estilos del main*/
@@ -70,14 +74,25 @@ body {
   align-items: center;
 }
 
+.main img{
+  width: 300px;
+  border: 7px solid #2e9a00;
+  border-radius: 20px;
+  box-shadow: 1px 3px 11px -5px rgba(64, 202, 0, 69);
+}
+
 h1{
-  font-size: 3em;
+  font-size: clamp(4vw, 1.5em, 3em);
 }
 h1 span{
   color: #2e9a00;
 }
 
-.download-cv{
+.main p{
+  font-size:large;
+}
+
+.download-cv, .project-details{
   padding: 10px 20px;
   background-color: #2e9a00;
   border: none;
@@ -92,14 +107,6 @@ h1 span{
   box-shadow: none;
 }
 
-.main img{
-  width: 300px;
-  border: 7px solid #2e9a00;
-  border-radius: 20px;
-  margin-left: 150px;
-  box-shadow: 1px 3px 11px -5px rgba(64, 202, 0, 69);
-}
-
 /*Estilos del about*/
 
 .about{
@@ -107,7 +114,7 @@ h1 span{
   grid-template-columns: repeat(10, 1fr);
   width: 100vw;
   align-items: center;
-  background-color: #c3c3c3;
+  background-color: #e6e6e6;
 }
 
 .about img{
@@ -314,7 +321,7 @@ h1 span{
   align-items: center;
   width: 100vw;
   height: 200px;
-  background-color: #c3c3c3;
+  background-color: #e6e6e6;
   color: #000;
   
 }
@@ -344,4 +351,161 @@ h1 span{
 
 span{
   color: #2e9a00;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper{
+    width: 100vw;
+    height:150vw;
+    background-color: #1a1b1f;
+    color: #fff;
+  }
+
+  .menu{
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #1a1b1fc3;
+    z-index: 1;
+    transform: translateX(-110%);
+    transition: all .5s ease-in-out;
+  }
+
+  .show-menu{
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+  }
+
+  .menu li{
+    margin: 2em;
+  }
+
+  .toggle-menu{
+    display: block;
+    cursor: pointer;
+  }
+
+  .fa-bars{
+    font-size: 1.5em;
+  }
+
+  .toggle-menu .fa-close{
+    font-size: 1.7em;
+    display: none;
+  }
+  
+
+  .main, .about{
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .main img{
+    width: min(70%, 350px);
+  }
+
+  .info-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-content .sotial-network, .info-content__subtitle{
+    display: block;
+  }
+
+  .info-content__subtitle{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #fff;
+  }
+
+  .info-content .sotial-network{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .download-cv{
+    display: none;
+  }
+
+  .info-content__p{
+    display: none;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: auto
+  }
+
+  .card{
+    width: auto;
+    color: #fff;
+    background-color: #2a2c32;
+    margin: 1em;
+    border-radius: 10px;
+  }
+
+  .card-img{
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/encriptador.png');
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card-img-2{
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/apeperia-web.png');
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card-img-3{
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/barberia-alura.png');
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .projects-links i{
+    font-size: 1.5em;
+  }
+
+  .project-details{
+    margin: 0 auto;
+    margin: 1em;
+    width: 70%;
+  }
+
+  .container-contact img{
+    width: 100%;
+    bottom: 0;
+  }
+
+  .contact-form{
+    margin-left: 0px;
+    margin-top: 2em;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin-top: 0.5em;
+    margin-left: 0px;
+  }
+
+  .contact-form h3{
+    margin-left: 10px;
+  }
+
 }
