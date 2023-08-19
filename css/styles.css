@@ -213,6 +213,14 @@ h1 span{
   border-radius: 20px 20px 0px 0px;
 }
 
+.card-img-5{
+  width: 100%;
+  height: 350px;
+  background-image: url('../img/React.png');
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
 .card-title{
   padding: 20px;
 }
@@ -487,6 +495,14 @@ span{
     width: 100%;
     height: 150px;
     background-image: url('../img/Alurageek.png');
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card-img-5{
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/React.png');
     background-size: cover;
     border-radius: 10px 10px 0px 0px;
   }
